@@ -1,0 +1,5 @@
+{% for file in files %}
+    <div class="row">
+        <a href="{{ asset('uploads/files/' ~ file.filename) }}">View file</a>
+    </div>
+{% endfor %}
