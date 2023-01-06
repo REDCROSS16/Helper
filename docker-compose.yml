@@ -14,3 +14,17 @@ services:
       - "5432:5432"
 #      - db-data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###
+  mailhog:
+    image: mailhog/mailhog:latest
+    environment:
+      MH_STORAGE: maildir
+    volumes:
+      - ./.docker/.maildir:/maildir:rw,delegated
+    ports:
+      - "8026:8025"
+      - "1025:1025"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
