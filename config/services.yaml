@@ -1,6 +1,9 @@
 
 parameters:
     files_directory: '%kernel.project_dir%/public/uploads/files'
+    default_admin_email: admin@example.com
+    default_domain: '127.0.0.1'
+    default_scheme: 'http'
 
 services:
     _defaults:
