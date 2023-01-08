@@ -21,10 +21,11 @@ class DocumentsUploadType extends AbstractType
                 'constraints' => [
                     new File([
                         'maxSize'          => '1024k',
-//                        'mimeTypes' => [
+                        'mimeTypes' => [
 //                            'application/pdf',
+                            'application/xls',
 //                            'application/x-pdf',
-//                        ],
+                        ],
                         'mimeTypesMessage' => 'Please upload a valid xls,csv document',
                     ]),
             ],
