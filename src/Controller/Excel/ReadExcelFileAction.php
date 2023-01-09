@@ -21,8 +21,6 @@ class ReadExcelFileAction extends AbstractController
         $excelReader = new ExcelReader($file);
         $excelReader->readFile();
 
-
-
         return $this->json('reader is closed');
     }
 }

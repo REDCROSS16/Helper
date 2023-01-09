@@ -21,7 +21,7 @@ class DocumentsUploadType extends AbstractType
                 'constraints' => [
                     new File([
                         'maxSize'          => '1024k',
-                        'mimeTypes' => [
+                        'mimeTypes'        => [
 //                            'application/pdf',
                             'application/xls',
 //                            'application/x-pdf',
@@ -31,7 +31,6 @@ class DocumentsUploadType extends AbstractType
             ],
             ])
             ->add('submit', SubmitType::class);
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
